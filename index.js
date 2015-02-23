@@ -5,10 +5,10 @@ module.exports = maxLen;
 function maxLen (string, warningLength, errorLength) {
   return string.split('\n').map(function (row, index) {
     var line = index + 1;
-    if (row.length < warningLength) {
+    if (row.length <= warningLength) {
       return false;
     }
-    if (row.length < errorLength) {
+    if (row.length <= errorLength) {
       return {
         fatal: false,
         line: line,
