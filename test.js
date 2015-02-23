@@ -11,16 +11,14 @@ test('maxLen', function (t) {
     severity: 1,
     fatal: false,
     ruleId: 'max-len',
-    line: 2,
-    column: 0
+    line: 2
   }]);
   t.deepEqual(maxLen(input, 50, 75), [{
     message: 'Line 2 exceeds the maximum line length of 75.',
     severity: 2,
     fatal: false,
     ruleId: 'max-len',
-    line: 2,
-    column: 0
+    line: 2
   }]);
   t.end();
 });

@@ -10,7 +10,6 @@ function maxLen (string, warningLength, errorLength) {
     }
     if (row.length < errorLength) {
       return {
-        column: 0,
         fatal: false,
         line: line,
         message: 'Line ' + line + ' exceeds the recommended line length of ' +
@@ -20,7 +19,6 @@ function maxLen (string, warningLength, errorLength) {
       };
     }
     return {
-      column: 0,
       fatal: false,
       line: line,
       message: 'Line ' + line + ' exceeds the maximum line length of ' +
